@@ -1,1 +1,1 @@
-Data analisys Covid-19
+Data analysis Covid-19
