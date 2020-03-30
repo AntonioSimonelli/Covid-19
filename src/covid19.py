@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 def csvfile(datafile):
 	df = pd.read_json(datafile)
-	df.to_csv("covid19.csv")
+	df.to_csv("../data/covid19.csv")
 
 def get_region(regions, region):
 	df = pd.read_csv(regions)
@@ -55,7 +55,7 @@ def world(url, country):
 	buf = df.loc[lambda df: df['Country'] == 'Korea, South']
 	data = buf['Confirmed']
 	plt.plot(date, data)
-	plt.axis("vertical")
+	
 	plt.legend([country, 'Italy', 'Korea, South'])
 	
 	plt.show()
@@ -90,8 +90,8 @@ regions = ["Campania","Lombardia"]
 dois = ["totale_casi","deceduti"]
 region = "Campania"
 country = 'China'
-#csvfile(datafile)
+csvfile(datafile)
 #graph(datafile)
-#model(datafile, regfile, region)
+model(datafile, regfile, region)
 #graphs(regfile, regions, dois)
-world(worldurl, country)
+#world(worldurl, country)
